@@ -51,10 +51,26 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(
-                  AntDesign.leftcircleo,
-                  color: ColorValues.kPrimary,
-                  size: 30.h,
+                Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    onTap: () {
+                      _pageController.animateToPage(
+                          context.read<OnBoardingNotifier>().selectedPage - 1,
+                          duration: const Duration(milliseconds: 200),
+                          curve: Curves.easeIn);
+                    },
+                    borderRadius:
+                        BorderRadius.circular(50), // Circular ripple effect
+                    splashColor: Colors.grey
+                        .withOpacity(0.4), // The color of the splash effect
+                    highlightColor: Colors.grey.withOpacity(0.2),
+                    child: Icon(
+                      AntDesign.leftcircleo,
+                      color: ColorValues.kPrimary,
+                      size: 30.h,
+                    ),
+                  ),
                 ),
                 SizedBox(
                   width: ScreenUtil().screenWidth * 0.7,
@@ -73,10 +89,26 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     },
                   ),
                 ),
-                Icon(
-                  AntDesign.rightcircleo,
-                  color: ColorValues.kPrimary,
-                  size: 30.h,
+                Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    onTap: () {
+                      _pageController.animateToPage(
+                          context.read<OnBoardingNotifier>().selectedPage + 1,
+                          duration: const Duration(milliseconds: 200),
+                          curve: Curves.easeIn);
+                    },
+                    borderRadius:
+                        BorderRadius.circular(50), // Circular ripple effect
+                    splashColor: Colors.grey
+                        .withOpacity(0.4), // The color of the splash effect
+                    highlightColor: Colors.grey.withOpacity(0.2),
+                    child: Icon(
+                      AntDesign.rightcircleo,
+                      color: ColorValues.kPrimary,
+                      size: 30.h,
+                    ),
+                  ),
                 )
               ],
             ),

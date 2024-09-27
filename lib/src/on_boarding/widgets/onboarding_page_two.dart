@@ -16,9 +16,13 @@ class OnBoardingPageTwo extends StatelessWidget {
       width: ScreenUtil().screenWidth,
       child: Stack(
         children: [
-          Image.asset(
-            R.ASSETS_IMAGES_WISHLIST_PNG,
-            fit: BoxFit.cover,
+          SizedBox(
+            height: ScreenUtil().screenHeight,
+            width: ScreenUtil().screenWidth,
+            child: Image.asset(
+              R.ASSETS_IMAGES_WISHLIST_PNG,
+              fit: BoxFit.cover,
+            ),
           ),
           Positioned(
             left: 30.w,
