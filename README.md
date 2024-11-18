@@ -1,6 +1,6 @@
 # style_hive
 
-A e-commerce fashion flutter application.
+A new Flutter project.
 
 ## Getting Started
 
