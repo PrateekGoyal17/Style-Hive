@@ -8,42 +8,40 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          SizedBox(
-            height: 48.h,
+    return Column(
+      children: [
+        SizedBox(
+          height: 48.h,
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 20.w, right: 13.w),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  CircleAvatar(),
+                  SizedBox(
+                    width: 13.w,
+                  ),
+                  Text("Testing Name"),
+                ],
+              ),
+              Icon(Icons.search),
+            ],
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 20.w, right: 13.w),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    CircleAvatar(),
-                    SizedBox(
-                      width: 13.w,
-                    ),
-                    Text("Testing Name"),
-                  ],
-                ),
-                Icon(Icons.search),
-              ],
-            ),
+        ),
+        SizedBox(
+          height: 90.h,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: List.generate(8, (index) {
+              return const CategoriesCircle();
+            }),
           ),
-          SizedBox(
-            height: 90.h,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: List.generate(8, (index) {
-                return const CategoriesCircle();
-              }),
-            ),
-          ),
-          ImageSlideshow(),
-        ],
-      ),
+        ),
+        ImageSlideshow(),
+      ],
     );
   }
 }

@@ -36,6 +36,7 @@ flutter:
     - assets/svg/
     - assets/svg/app/
     - assets/svg/auth/
+    - assets/svg/navbar_icons/
     - assets/gifs/
   fonts:
     - family: Sfpro

@@ -6,6 +6,8 @@ import 'package:style_hive/src/authentication/views/signup_screen.dart';
 import 'package:style_hive/src/home/views/home_screen.dart';
 import 'package:style_hive/src/splash/views/splash_screen.dart';
 
+import '../../src/entrypoint/views/entrypoint.dart';
+
 final GoRouter _router = GoRouter(initialLocation: '/', routes: [
   GoRoute(path: '/', builder: (context, state) => const SplashScreen()),
   GoRoute(path: '/signup', builder: (context, state) => const SignupScreen()),
@@ -17,6 +19,7 @@ final GoRouter _router = GoRouter(initialLocation: '/', routes: [
       path: '/forgotPasswordOtp',
       builder: (context, state) => const ForgotPasswordOtpScreen()),
   GoRoute(path: '/home', builder: (context, state) => const HomeScreen()),
+  GoRoute(path: '/entrypoint', builder: (context, state) => EntryPoint()),
 ]);
 
 GoRouter get router => _router;

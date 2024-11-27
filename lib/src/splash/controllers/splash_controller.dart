@@ -13,7 +13,7 @@ class SplashController {
       //   GoRouter.of(context).go('/home');
       // }
       // ignore: use_build_context_synchronously
-      GoRouter.of(context).go('/home');
+      GoRouter.of(context).go('/entrypoint');
     });
   }
 }
